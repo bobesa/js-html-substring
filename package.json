@@ -5,13 +5,15 @@
   "version": "1.0.0",
   "description": "Code that allows substring of html content ",
   "url": "https://github.com/bobesa/js-html-substring",
-  
   "scripts": {
-    "test": "vows html-substring-test.js --spec"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage" 
   },
-  
   "devDependencies": {
-    "assert": "^1.3.0",
-    "vows": "^0.8.1"
+    "coveralls": "^2.11.2",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "istanbul": "^0.3.14",
+    "mocha-lcov-reporter": "0.0.2"
   }
 }
