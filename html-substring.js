@@ -63,6 +63,7 @@ function html_substr(src, length, suffix){
         }                           
     }
     //Return final cutted content and put suffix after it
+    if(suffix === false) return str;
     return str + ((typeof suffix == "undefined" || suffix === true) ? "..." : suffix);
 }
 
