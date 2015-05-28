@@ -34,10 +34,11 @@ function html_substr(src, length, suffix){
         c = src.charAt(i); //Read next char
         if(c == '<') {
             //Tag found
-            end = src.slice(i).indexOf(">") + i + 1;
+            end = src.slice(i).indexOf(">");
             if(end == -1) { //Check for incomplete tag
                 return str;
             }
+            end += i + 1;
             tag = src.slice(i,end); //Read tag contents
             str += tag; //Append the tag to final content
             if(tag.charAt(1) == "/") {
