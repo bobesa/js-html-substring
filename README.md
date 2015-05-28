@@ -1,4 +1,6 @@
 # html-substring
+[![Build Status](https://travis-ci.org/bobesa/js-html-substring.svg?branch=master)](https://travis-ci.org/bobesa/js-html-substring)
+[![Coverage Status](https://coveralls.io/repos/bobesa/js-html-substring/badge.svg?branch=master)](https://coveralls.io/r/bobesa/js-html-substring?branch=master)
 JavaScript code that allows to substring of html content. Only actual text content (no tags, arguments etc.) is counting towards character count.
 
 # Usage
