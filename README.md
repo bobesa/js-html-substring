@@ -19,7 +19,7 @@ JavaScript code that allows to substring of html content. Only actual text conte
 ```
 
 ```js
-"<ul><li>ggg</li><li>mmm</li><li>ccc</li></ul> ddd eee".html_substr(5); //Direct use trough prototype
+html_substr("<ul><li>ggg</li><li>mmm</li><li>ccc</li></ul> ddd eee", 5); //Direct use trough prototype
 "<ul><li>ggg</li><li>mm</li></ul>..." //Output
 ```
 
