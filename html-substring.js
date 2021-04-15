@@ -49,7 +49,18 @@ function html_substr(src, length, suffix){
                 tagTree.push(tagStrip(tag));                       
             }
             i = end; //Move the position to end of the tag
-			
+        } else if (c == '&') {
+            // HTML Character Entities found - https://www.w3schools.com/HTML/html_entities.asp
+            end = src.slice(i).indexOf(";");
+            if(end == -1) { //Check for incomplete entity name
+                return str;
+            }
+            end += i + 1;
+            tag = src.slice(i,end); //Read entity name
+            // Append entity name and move the position
+            str += tag; //Append the entity name to final content
+            i = end; // Move the position to end of the entity name
+            cnt++;	
         } else {
             //Append content character and move the position
             str += c;
